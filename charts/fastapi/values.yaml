@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: tsadimas/fastapi
-  tag: 1.1
+  repository: 'tsadimas/fastapi'
+  tag: 1.2
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
