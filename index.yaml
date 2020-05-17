@@ -2,6 +2,19 @@ apiVersion: v1
 entries:
   fastapi:
   - apiVersion: v1
+    appVersion: "1.2"
+    created: "2020-05-17T23:29:52.308812364+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 433b625265a9aaa63b51b7169eee628d547e2004c8705f29ee062c3443ada733
+    home: https://github.com/tsadimas/fastapi-helm-chart
+    maintainers:
+    - email: tsadimas@hua.gr
+      name: Anargyros Tsadimas
+    name: fastapi
+    urls:
+    - https://github.com/tsadimas/fastapi-helm-chart/releases/download/fastapi-1.2/fastapi-1.2.tgz
+    version: "1.2"
+  - apiVersion: v1
     appVersion: "1.1"
     created: "2020-05-17T23:21:09.009783589+03:00"
     description: A Helm chart for Kubernetes
