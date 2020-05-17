@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 'tsadimas/fastapi'
+  repository: 'tsadimas/myfastapi'
   tag: latest
   pullPolicy: IfNotPresent
 
