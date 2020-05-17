@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "fastapi.fullname" . }}
+  labels: 
+{{ include "fastapi.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }} 
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "fastapi.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "fastapi.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }} 
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 8000 
+          envFrom:
+            - configMapRef:
+                name: fastapi-config
