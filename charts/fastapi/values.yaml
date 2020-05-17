@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: 'tsadimas/fastapi'
-  tag: 1.2
+  tag: latest
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
